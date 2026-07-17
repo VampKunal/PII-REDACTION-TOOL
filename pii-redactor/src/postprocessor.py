@@ -16,6 +16,17 @@ HEADING_BLACKLIST = {
     "DISCLAIMER",
     "DEFINITIONS AND ABBREVIATIONS",
     "GENERAL INFORMATION",
+    "CONTACT PERSON",
+    "TELEPHONE",
+    "TEL",
+    "PHONE",
+    "MOBILE",
+    "EMAIL",
+    "E-MAIL",
+    "FAX",
+    "PROMOTERS",
+    "PROMOTER",
+    "NAME",
 }
 
 def resolve_overlaps(entities: list[Entity]) -> list[Entity]:

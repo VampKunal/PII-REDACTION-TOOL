@@ -19,8 +19,9 @@ Designed for **high recall** (miss nothing), **controlled precision** (via expli
 - **Format-Preserving:** Modifies documents at the lowest `Run` level. All bolding, italics, fonts, and table layouts are preserved flawlessly.
 - **Structural Context Awareness:** Uses document headings (e.g., `OUR PROMOTER`, `REGISTERED OFFICE`) to aggressively detect names and addresses in the lines that follow, even if they aren't standard names.
 - **Zero API Keys Required:** Runs 100% locally using SpaCy, Presidio, Aho-Corasick, and RapidFuzz. No sensitive documents are ever sent to a third-party server.
-- **Consistent Mapping:** If "John Smith" is replaced with "David Martinez", he will be called "David Martinez" throughout the entire 500-page document.
+- **Consistent Mapping:** If "John Smith" is detected, he will be replaced consistently with a fixed placeholder like `<PERSON>` throughout the entire 500-page document, replacing Faker to prevent real-sounding names from being used as substitutes.
 - **Fuzzy & Exact Dictionary Matching:** Ships with JSON lists of top companies and global locations, cross-referenced efficiently via O(N) trie algorithms.
+- **Address & Company Suffix Detectors:** Uses highly targeted custom regex matchers for Address Keywords (Road, Street, Sector, etc.) and Company suffixes (Ltd, Pvt Ltd, Inc, etc.) for robust hybrid recognition.
 - **Chunked Processing:** Easily processes multi-megabyte Word documents (like Prospectuses) without running out of memory.
 
 ---
@@ -80,9 +81,10 @@ The tool runs a 7-stage pipeline optimized for complex legal formats:
    - **Presidio:** Catches emails, phones, SSNs, standard names.
    - **SpaCy ORG:** Specialized extraction for organizations, with score boosting for keywords like `TRUST`, `LTD`, `PVT`.
    - **Aho-Corasick & RapidFuzz:** Exact and fuzzy dictionary matching exclusively for Organizations and Locations (Cities/States/Countries).
+   - **Regex Recognizers:** Targets Address Keywords (Road, Street, District, PIN, PO Box) and Company suffixes (Ltd, Inc, Corporation, Trust).
 5. **Post-Processing:** Resolves overlapping entities, merges duplicates, drops low-confidence matches, and enforces explicit **Whitelists** (e.g., SEBI, NSE, RBI) and **Heading Blacklists** (e.g., "TABLE OF CONTENTS").
 6. **Validation:** Checks entity checksums (e.g., verifying phone numbers via `phonenumbers` and credit cards via `Luhn`).
-7. **Replacement:** Replaces validated entities in the document using `Faker` generators, recording the change in a centralized `MappingStore`.
+7. **Replacement:** Replaces validated entities in the document using fixed placeholders (like `<PERSON>`, `<ORGANIZATION>`) inspired by `presidio-anonymizer`, dropping Faker for better data-integrity.
 
 ---
 
@@ -101,7 +103,46 @@ Extending the tool to a new PII type (e.g., **Driver's License Number**) require
 
 1. **`regex_recognizer.py`** — add the pattern (if regex-detectable)
 2. **`validator.py`** — add a specific validator function
-3. **`replacer.py`** — add the `Faker` generator
+3. **`replacer.py`** — add the fixed string substitution logic
 4. **`detector.py`** — add context boost/suppress keywords
 
 No changes are needed to the extractor, orchestrator, or output writer!
+
+---
+
+## Evaluation & Metrics
+
+To test the accuracy of the PII redactor (Precision, Recall, and F1-Score), an evaluation script is included: `evaluate.py`.
+
+You will need a JSON file of "Ground Truth" entities (what *should* have been redacted) and compare it against the `mapping.json` outputted by the tool.
+
+```bash
+python evaluate.py --truth "data/ground_truth.json" --preds "output/mapping.json"
+```
+
+The script will calculate:
+- **Precision:** How many of the redacted items were actually PII? (Low False Positives).
+- **Recall:** How much of the actual PII in the document did we successfully catch? (Low False Negatives).
+- **F1-Score:** The harmonic mean of Precision and Recall.
+
+It also outputs a debug list of exact strings that were missed (False Negatives) or incorrectly redacted (False Positives) so you can easily refine the whitelist and regex rules.
+
+---
+
+## Web Server Configuration (Next.js + FastAPI)
+
+We have transformed this CLI tool into a full-stack web application. The architecture is cleanly divided into a frontend and a backend to ensure scalability and ease of deployment.
+
+### What `pii-redactor` Does
+The core `pii-redactor` logic remains the brain of the operation. It is purely responsible for taking a DOCX file in memory, parsing it, passing it through the NLP pipeline (SpaCy, Presidio, Custom Regex), and returning a fully redacted DOCX file along with a JSON mapping. It has no concept of HTTP requests or web clients.
+
+### What the Web Server Does
+The web server wraps the `pii-redactor` core to make it accessible over the internet:
+1. **Frontend (Next.js):** Provides a beautiful, drag-and-drop user interface for clients to upload documents. It handles the `multipart/form-data` upload and automatically downloads the processed file once returned by the backend. It is hosted on **Vercel**.
+2. **Backend (FastAPI):** A high-performance Python asynchronous server. It exposes a `POST /api/redact` endpoint. It receives the uploaded file, saves it to a secure temporary directory, executes the `pii-redactor` pipeline on it, returns the processed file as a downloadable blob, and cleans up the server's local storage immediately after. It is hosted on **Render**.
+
+### Deployment Implementation for GitHub
+The deployment is entirely Git-driven (CI/CD):
+- **Version Control:** All code is pushed to a single GitHub repository.
+- **Frontend CI/CD (Vercel):** Connected directly to the GitHub repo. Any push to `main` triggers Vercel to automatically build the Next.js app and deploy it globally.
+- **Backend CI/CD (Render):** Connected directly to the GitHub repo. Any push to `main` triggers Render to automatically pull the Python code, install the heavy ML dependencies from `requirements.txt` (including downloading the SpaCy NLP models), and start the FastAPI web server. The Next.js frontend communicates with the FastAPI backend using environment variables (`NEXT_PUBLIC_API_URL`).

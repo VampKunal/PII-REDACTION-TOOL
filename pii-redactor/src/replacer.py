@@ -1,19 +1,17 @@
-from faker import Faker
 from src.mapping_store import MappingStore
 from src.models import Entity
 
-fake = Faker("en_US")
-
 REPLACEMENT_GENERATORS = {
-    "PERSON":        lambda: fake.name(),
-    "EMAIL":         lambda: fake.email(),
-    "PHONE_NUMBER":  lambda: fake.phone_number(),
-    "ORGANIZATION":  lambda: fake.company(),
-    "ADDRESS":       lambda: fake.address(),
-    "US_SSN":        lambda: fake.ssn(),
-    "CREDIT_CARD":   lambda: fake.credit_card_number(),
-    "DATE_OF_BIRTH": lambda: fake.date_of_birth(minimum_age=18, maximum_age=90).strftime("%d/%m/%Y"),
-    "IP_ADDRESS":    lambda: fake.ipv4_private(),
+    "PERSON":        lambda: "<PERSON>",
+    "EMAIL":         lambda: "<EMAIL>",
+    "PHONE_NUMBER":  lambda: "<PHONE_NUMBER>",
+    "ORGANIZATION":  lambda: "<ORGANIZATION>",
+    "ADDRESS":       lambda: "<ADDRESS>",
+    "US_SSN":        lambda: "<US_SSN>",
+    "CREDIT_CARD":   lambda: "<CREDIT_CARD>",
+    "DATE_OF_BIRTH": lambda: "<DATE_OF_BIRTH>",
+    "IP_ADDRESS":    lambda: "<IP_ADDRESS>",
+    "LOCATION":      lambda: "<LOCATION>",
     # fallback
     "DEFAULT":       lambda: "***REDACTED***"
 }
@@ -33,6 +31,13 @@ def apply_replacements_to_spans(spans, replacements):
     replacements.sort(key=lambda x: len(x[1]), reverse=True)
     
     for span in spans:
+        # First, apply forced labels from structural context
+        if getattr(span, "forced_label", None):
+            generator = REPLACEMENT_GENERATORS.get(span.forced_label, REPLACEMENT_GENERATORS["DEFAULT"])
+            span.text = generator()
+            span.run_ref.text = span.text
+            continue # Skip substring replacements if the whole span is forced
+            
         for ent, original, replacement in replacements:
             if original in span.text:
                 span.text = span.text.replace(original, replacement)

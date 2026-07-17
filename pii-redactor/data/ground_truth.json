@@ -1,0 +1,782 @@
+[
+    {
+        "text": "Johnathan H. Smith",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Jane Doe-Smith",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Robert Oppenheimer",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Alice L. Johnson",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Michael Chang",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Sarah Jenkins",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "David Lee",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Priya Patel",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Emily R. Watson",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Marcus Aurelius",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Sophia Williams",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "William Anderson",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Benjamin Carter",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Olivia Martinez",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Daniel Thompson",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Ava Robinson",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Noah Walker",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Liam Scott",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Isabella Moore",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Charlotte Lewis",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Amelia Young",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Ethan Hall",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Mason Allen",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Harper King",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Elijah Wright",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Grace Hill",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Henry Adams",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Victoria Green",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Arjun Sharma",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Rohan Verma",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Neha Kapoor",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Ananya Gupta",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Karan Mehta",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Rahul Khanna",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Sneha Iyer",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Aditya Singh",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Pooja Nair",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Vikram Desai",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Nikhil Bansal",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Aditi Rao",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Chen Wei",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Yuki Tanaka",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Carlos Mendes",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Fatima Al-Hassan",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Ahmed Ibrahim",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Maria Fernandez",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Lucas Oliveira",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Sofia Petrova",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Ivan Kuznetsov",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Emma Brown",
+        "entity_type": "PERSON"
+    },
+    {
+        "text": "Global Tech Innovations Pvt Ltd",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Acme Corporation",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Wayne Enterprises",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Stark Industries",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Vanguard Financial Services",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Apex Manufacturing LLC",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Blue Ocean Strategy Group",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Nexus Technologies Inc.",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Quantum Data Systems",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Future Vision Labs",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "BrightPath Consulting",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Northwind Traders",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Contoso Ltd.",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Fabrikam Solutions",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Pioneer Logistics Pvt Ltd",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Evergreen Pharmaceuticals",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Silverline Healthcare",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Zenith Banking Group",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Vertex Cloud Services",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Summit Retail Holdings",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Prime Engineering Works",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Orion Defense Systems",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Infinity Software Labs",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Delta Electronics Pvt Ltd",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "Nova Energy Solutions",
+        "entity_type": "ORGANIZATION"
+    },
+    {
+        "text": "1234 Silicon Valley Blvd, Suite 400, San Jose, CA 95131",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "742 Evergreen Terrace, Springfield",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "221B Baker Street, London, UK",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Sector 45, Cyber City, Gurugram, Haryana 122003",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "1 Wall Street, New York, NY 10005",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "PO Box 4567, Dubai, UAE",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "10 Downing Street, London",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "456 Corporate Park Road",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "1600 Amphitheatre Parkway, Mountain View, CA",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "350 Fifth Avenue, New York, NY",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "405 Lexington Avenue, New York, NY",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "100 King Street West, Toronto, ON",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Marina Bay Sands, Singapore",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "MG Road, Bengaluru, Karnataka",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Banjara Hills, Hyderabad",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Salt Lake Sector V, Kolkata",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Connaught Place, New Delhi",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Andheri East, Mumbai",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "Electronic City Phase 1, Bengaluru",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "500 Oracle Parkway, Redwood Shores, CA",
+        "entity_type": "LOCATION"
+    },
+    {
+        "text": "john.smith@globaltech.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "info@acmecorp.net",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "contact.hr@vanguard-fin.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "support@starkindustries.io",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "jane.doe123@gmail.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "robert.o@university.edu",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "alice.johnson@futurelabs.ai",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "michael.chang@vertexcloud.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "sarah.jenkins@yahoo.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "david.lee@northwind.org",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "priya.patel@consulting.co.in",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "vikram.desai@quantumdata.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "aditya.singh@company.org",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "hello@example.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "admin@myportal.io",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "contact@startup.dev",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "ceo@brightpath.biz",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "hr@novaenergy.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "finance@zenithbank.com",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "employee123@corp.net",
+        "entity_type": "EMAIL_ADDRESS"
+    },
+    {
+        "text": "+1-555-019-8372",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "(800) 555-1234",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+44 20 7946 0958",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "0091-9876543210",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "987-654-3210",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+1 (408) 555-9999",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+91 98765 43210",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+91-9988776655",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+49 30 12345678",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+81-3-1234-5678",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+61 2 9876 5432",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+33 1 42 68 53 00",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+86 10 8888 9999",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+971 4 123 4567",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+65 6123 4567",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+91-7012345678",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+1-212-555-9876",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "+1-617-555-2020",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "5551234567",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "020-7946-0958",
+        "entity_type": "PHONE_NUMBER"
+    },
+    {
+        "text": "https://www.globaltech.com",
+        "entity_type": "URL"
+    },
+    {
+        "text": "http://internal-portal.acmecorp.local",
+        "entity_type": "URL"
+    },
+    {
+        "text": "www.starkindustries.io/careers",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://careers.vertexcloud.com",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://portal.quantumdata.ai/login",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://docs.futurevisionlabs.com",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://support.contoso.com",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://northwindtraders.com",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://api.company.org/v1/users",
+        "entity_type": "URL"
+    },
+    {
+        "text": "https://dashboard.example.io",
+        "entity_type": "URL"
+    },
+    {
+        "text": "123-45-6789",
+        "entity_type": "US_SOCIAL_SECURITY_NUMBER"
+    },
+    {
+        "text": "987-65-4321",
+        "entity_type": "US_SOCIAL_SECURITY_NUMBER"
+    },
+    {
+        "text": "111-22-3333",
+        "entity_type": "US_SOCIAL_SECURITY_NUMBER"
+    },
+    {
+        "text": "555-44-6666",
+        "entity_type": "US_SOCIAL_SECURITY_NUMBER"
+    },
+    {
+        "text": "999-88-7777",
+        "entity_type": "US_SOCIAL_SECURITY_NUMBER"
+    },
+    {
+        "text": "A12345678",
+        "entity_type": "PASSPORT_NUMBER"
+    },
+    {
+        "text": "M98765432",
+        "entity_type": "PASSPORT_NUMBER"
+    },
+    {
+        "text": "N45678901",
+        "entity_type": "PASSPORT_NUMBER"
+    },
+    {
+        "text": "P90817263",
+        "entity_type": "PASSPORT_NUMBER"
+    },
+    {
+        "text": "K11223344",
+        "entity_type": "PASSPORT_NUMBER"
+    },
+    {
+        "text": "DL0420110149646",
+        "entity_type": "DRIVER_LICENSE"
+    },
+    {
+        "text": "MH1420150012345",
+        "entity_type": "DRIVER_LICENSE"
+    },
+    {
+        "text": "CA-D1234567",
+        "entity_type": "DRIVER_LICENSE"
+    },
+    {
+        "text": "TX-987654321",
+        "entity_type": "DRIVER_LICENSE"
+    },
+    {
+        "text": "DL8CAF123456",
+        "entity_type": "DRIVER_LICENSE"
+    },
+    {
+        "text": "4111111111111111",
+        "entity_type": "CREDIT_CARD"
+    },
+    {
+        "text": "5555555555554444",
+        "entity_type": "CREDIT_CARD"
+    },
+    {
+        "text": "378282246310005",
+        "entity_type": "CREDIT_CARD"
+    },
+    {
+        "text": "6011111111111117",
+        "entity_type": "CREDIT_CARD"
+    },
+    {
+        "text": "3530111333300000",
+        "entity_type": "CREDIT_CARD"
+    },
+    {
+        "text": "123456789012",
+        "entity_type": "AADHAAR_NUMBER"
+    },
+    {
+        "text": "234567890123",
+        "entity_type": "AADHAAR_NUMBER"
+    },
+    {
+        "text": "345678901234",
+        "entity_type": "AADHAAR_NUMBER"
+    },
+    {
+        "text": "456789012345",
+        "entity_type": "AADHAAR_NUMBER"
+    },
+    {
+        "text": "567890123456",
+        "entity_type": "AADHAAR_NUMBER"
+    },
+    {
+        "text": "ABCDE1234F",
+        "entity_type": "PAN_NUMBER"
+    },
+    {
+        "text": "PQRSX5678K",
+        "entity_type": "PAN_NUMBER"
+    },
+    {
+        "text": "LMNOP4321Q",
+        "entity_type": "PAN_NUMBER"
+    },
+    {
+        "text": "ZXCVB9876M",
+        "entity_type": "PAN_NUMBER"
+    },
+    {
+        "text": "GHJKL1111R",
+        "entity_type": "PAN_NUMBER"
+    },
+    {
+        "text": "192.168.1.100",
+        "entity_type": "IP_ADDRESS"
+    },
+    {
+        "text": "10.0.0.15",
+        "entity_type": "IP_ADDRESS"
+    },
+    {
+        "text": "172.16.10.5",
+        "entity_type": "IP_ADDRESS"
+    },
+    {
+        "text": "203.0.113.42",
+        "entity_type": "IP_ADDRESS"
+    },
+    {
+        "text": "2001:db8::1",
+        "entity_type": "IP_ADDRESS"
+    },
+    {
+        "text": "00:1A:2B:3C:4D:5E",
+        "entity_type": "MAC_ADDRESS"
+    },
+    {
+        "text": "F8:E4:3B:22:11:99",
+        "entity_type": "MAC_ADDRESS"
+    },
+    {
+        "text": "AA-BB-CC-DD-EE-FF",
+        "entity_type": "MAC_ADDRESS"
+    },
+    {
+        "text": "3C:52:82:11:22:33",
+        "entity_type": "MAC_ADDRESS"
+    },
+    {
+        "text": "08:00:27:12:34:56",
+        "entity_type": "MAC_ADDRESS"
+    },
+    {
+        "text": "jdoe1989",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "admin_root",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "rahul_dev",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "alice2025",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "mchang_official",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "techguru99",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "guest_user",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "finance_admin",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "test_account01",
+        "entity_type": "USERNAME"
+    },
+    {
+        "text": "employee_2048",
+        "entity_type": "USERNAME"
+    }
+]

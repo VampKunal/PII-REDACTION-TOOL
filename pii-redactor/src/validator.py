@@ -3,7 +3,7 @@ import re
 
 def validate_phone(candidate: str) -> bool:
     try:
-        parsed = phonenumbers.parse(candidate, "US") # fallback to US or IN if needed
+        parsed = phonenumbers.parse(candidate, "IN") # Default to IN, but parses +XX correctly
         return phonenumbers.is_valid_number(parsed)
     except phonenumbers.NumberParseException:
         return False

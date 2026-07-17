@@ -45,5 +45,15 @@ def detect_orgs(text: str) -> list[Entity]:
             )
             entity = boost_org_score(entity, context)
             entities.append(entity)
+        elif ent.label_ in ("GPE", "LOC", "FAC"):
+            entity = Entity(
+                text=ent.text, 
+                label="LOCATION",
+                start=ent.start_char, 
+                end=ent.end_char,
+                score=0.85, # High score to override false positive organizations
+                source="spacy_ner"
+            )
+            entities.append(entity)
             
     return entities
