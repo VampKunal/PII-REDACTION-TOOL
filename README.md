@@ -50,7 +50,7 @@ pip install -r requirements.txt
 3. **Download the SpaCy NER Model:**
 Because we use SpaCy to detect `ORGANIZATION` entities, you must download the pre-trained Large English Model:
 ```bash
-python -m spacy download en_core_web_lg
+python -m spacy download en_core_web_sm
 ```
 
 ---

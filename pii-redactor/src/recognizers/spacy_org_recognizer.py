@@ -2,9 +2,9 @@ import spacy
 from src.models import Entity
 
 try:
-    nlp = spacy.load("en_core_web_lg")
+    nlp = spacy.load("en_core_web_sm")
 except OSError:
-    print("Warning: spacy model 'en_core_web_lg' not found. Please install it.")
+    print("Warning: spacy model 'en_core_web_sm' not found. Please install it.")
     nlp = None
 
 ORG_BOOST_CONTEXTS = [
