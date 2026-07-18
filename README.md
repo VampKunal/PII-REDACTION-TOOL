@@ -13,6 +13,8 @@ Designed for **high recall** (miss nothing), **controlled precision** (via expli
 - [Extending the Tool](#extending-the-tool)
 
 ---
+# RESULTS 
+<img width="413" height="317" alt="image" src="https://github.com/user-attachments/assets/2ef69166-acd2-4ded-9b60-e22e6bc583ea" />
 
 ## Features
 
