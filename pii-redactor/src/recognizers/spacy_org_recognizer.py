@@ -1,10 +1,11 @@
 import spacy
 from src.models import Entity
+from src.recognizers.presidio_recognizer import nlp_engine
 
 try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    print("Warning: spacy model 'en_core_web_sm' not found. Please install it.")
+    nlp = nlp_engine.nlp["en"]
+except Exception as e:
+    print(f"Warning: spacy model not found from presidio engine. {e}")
     nlp = None
 
 ORG_BOOST_CONTEXTS = [

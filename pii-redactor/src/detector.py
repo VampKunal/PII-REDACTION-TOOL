@@ -24,7 +24,7 @@ username_regex_recognizer = RegexRecognizer(USERNAME_REGEX, "USERNAME", score=0.
 
 def detect_all(text: str) -> list:
     entities = []
-    chunk_size = 50000
+    chunk_size = 10000
     overlap = 100
     
     total_chunks = (len(text) // chunk_size) + 1
